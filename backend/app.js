@@ -6,8 +6,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 //i,porte le router
 
-//const stuffRoutes = require("./routes/stuff");
-//const userRoutes = require("./routes/User");
+const bookRoutes = require("./routes/books");
+const userRoutes = require("./routes/User");
 const cors = require("cors");
 const path = require("path");
 mongoose
@@ -39,7 +39,7 @@ app.use(bodyParser.json());
 
 //app.use("/images", express.static(path.join(__dirname, "images")));
 // on donne les routes a notre app
-//app.use("/api/stuff", stuffRoutes);
-//app.use("/api/auth", userRoutes);
+app.use("/api/book", bookRoutes);
+app.use("/api/auth", userRoutes);
 //on exporte le fichier app pour etre utilisable par les autres fichiers
 module.exports = app;

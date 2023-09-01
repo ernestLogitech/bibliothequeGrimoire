@@ -53,7 +53,7 @@ exports.modifyBook = (req, res, next) => {
     });
 };
 
-exports. = (req, res, next) => {
+exports.getAllBook = (req, res, next) => {
   Book.find()
     .then((book) => res.status(200).json(book))
     .catch((error) => res.status(400).json({ error }));
